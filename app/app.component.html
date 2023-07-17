@@ -1,2 +1,17 @@
-
-<router-outlet></router-outlet>
+<div class="main-content">
+  <div class="card">
+    <div class="card-header">
+      <h1>TASK DETAILS</h1>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="TaskForm">
+        <div class="row">
+          <div class="form-group">
+            <label>Client Name</label>
+            <ng-select [items]="ClientDtls" bindLabel="clientName" bindValue="clientId" formControlName="Client"></ng-select>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
