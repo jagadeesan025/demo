@@ -1,0 +1,41 @@
+<!--
+<p>api-comp works!</p>
+<p>{{fact}}</p>
+<p>{{length}}</p>
+<p>{{count}}</p>
+
+<table>
+    <th>API</th><th>Description</th>
+    <tr *ngFor="let x of list">
+        <td>{{x.API}}</td>
+        <td>{{x.Description}}</td>
+
+    </tr>
+</table>
+
+<form [formGroup]="r">
+<input type = "text" formControlName = "category">
+<input type = "text" formControlName = "description">
+
+</form>
+ <button class="btn,btn-primary" (click)="Submit()">submit</button> -->
+
+ <br><br><br>
+
+ <div class="container c1" style="padding-top: 30px;padding-bottom: 20px;"><form [formGroup]="f">
+  <div class="row f"><div class="col-4"><input  class="mg" type ="text" formControlName="employeeName" placeholder="employeeName" ></div> <br> <br>
+  <div class="col-4"> <input class="mg" type ="text" formControlName="mobile" placeholder="mobile"></div> <br><br>
+  <div class="col-4"><input class="mg" type ="text" formControlName="userName"placeholder="userName"></div> <br><br></div>
+  <br><br>
+
+  <div class="row f"><input class="mg" type ="password" formControlName="password" placeholder="password"></div><br><br>
+
+  <div class="row f"><input class="mg" type ="password" formControlName="confirmPassword" placeholder="confirmPassword"></div><br><br>
+ </form>
+ <br><br>
+ <button class="btn,btn-primary" (click)="submit1()" style="background-color: blue; color: black;">submit</button></div>
+
+<br><br>
+ <button class="btn,btn-primary" routerLink="/test" style="margin-left: 30px;background-color: aqua;" >data</button>
+
+

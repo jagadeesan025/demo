@@ -1,0 +1,67 @@
+<form #f >
+<div class="ca"><nav class="navbar navbar-expand-lg bg-info">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">kingdom</a>
+    <button class="navbar-toggler" type="button" data-s-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="ca"><div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </div></div>
+</nav>
+</div>
+<br>
+<br><br>
+<div class="container">
+  <div class="row">
+ <div class="col-2 ">
+
+    <select name="title" ngModel #title="ngModel" class="form-control ce " [ngClass]="{ 'is-invalid': f.submit && title.invalid }" required>
+        <option value=""></option>
+        <option value="Mr">Mr</option>
+        <option value="Mrs">Mrs</option>
+        <option value="Miss">Miss</option>
+        <option value="Ms">Ms</option>
+    </select></div>
+  <div class="col-5">
+    <input type="text" class="form-control  ce" placeholder="First name" aria-label="First name">
+  </div>
+</div>
+  <div class="col-5">
+    <input type="text" class="form-control  ce" placeholder="Last name" aria-label="Last name">
+  </div></div>
+  <form class="row ">
+    <div class="col-12">
+      <br>
+      <input type="text" name="email" ngModel #email="ngModel" class="form-control ce " [ngClass]="{ 'is-invalid': f.submit && email.invalid }" required email placeholder="email id">
+    </div>
+    <br>
+    <div class="col-12">
+      <br>
+     <input type="password" name="password" ngModel #password="ngModel" class="form-control ce" [ngClass]="{ 'is-invalid': f.submit && password.invalid }" required minlength="6" placeholder="password">
+    </div>
+    <br><br>
+  </form>
+  <br>
+  <div class="row">
+    <div class="col-6 mi">
+      <button class="btn btn-primary">sigin</button></div>
+
+    <div class="col-6 me "><button class="btn btn-secondary" type="reset">Cancel</button></div></div>
+
+
+

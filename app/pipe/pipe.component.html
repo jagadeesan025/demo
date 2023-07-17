@@ -1,0 +1,152 @@
+<!-- <div [ngClass]="{'blue':test}">{{i}}</div>
+
+<div style="color:red">{{i}}</div>
+<div [ngStyle]="{color:'red'}">{{i}}</div>
+
+<input type="text"  [(ngModel)]="i">
+
+<button type="submit" (click)="Submit()">teststt</button>
+<div [ngClass]="{'tg':car}">{{i}}</div>
+
+<div>{{x | date : 'short'}}</div>
+
+<div>{{amt | currency : 'INR'}}</div>
+
+<div>{{c | uppercase}}</div>
+<div>{{json | json}}</div> -->
+<!-- <br /><br /> -->
+
+
+<div class="container">
+  <div class="card con " style="text-align: center;">
+   <div style=" background-image: url(/assets/as1.jpg);">
+    <label for="formGroupExampleInput" class="form-label mn">sign in /log in</label>
+    <hr class="con" >
+
+    <form #f="ngForm">
+      <br />
+
+      <div class="row">
+        <div class="col-2">
+          <select
+            name="title"
+            ngModel
+            #title="ngModel"
+            class="form-control co"
+            [ngClass]="{ 'is-invalid': f.submitted && title.invalid }"required="">
+            <option value=""></option>
+            <option value="Mr">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Miss">Miss</option>
+            <option value="Ms">Ms</option>
+          </select>
+          <div *ngIf="f.submitted && title.errors" class="invalid-feedback">
+            <div *ngIf="title.errors.required">Title is required</div>
+        </div></div>
+        <div class="col-5">
+          <input
+            type="text"
+            class="form-control co"
+            placeholder="First name"
+            aria-label="First name"
+            name="firstName" ngModel
+            #firstName="ngModel"
+            [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required
+
+          />
+          <div *ngIf="f.submitted && firstName.errors" class="invalid-feedback">
+            <div *ngIf="firstName.errors.required">First Name is required</div>
+        </div></div>
+
+        <div class="col-5">
+          <input
+            type="text"
+            name="lastName"
+            class="form-control co"
+            placeholder="Last name"
+            aria-label="Last name"
+            ngModel
+            #lastName="ngModel"
+            [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }" required
+
+          />
+          <div *ngIf="f.submitted && lastName.errors" class="invalid-feedback">
+            <div *ngIf="lastName.errors.required">Last Name is required</div>
+        </div>
+        </div>
+      </div>
+      <br />
+      <br>
+      <div class="row">
+        <div class="col">
+          <input
+            type="email"
+            name="email"
+            ngModel
+            #email="ngModel"
+            class="form-control co"
+            id="inputEmail4"
+            placeholder="Email id"
+            [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email
+          />
+          <div *ngIf="f.submitted && email.errors" class="invalid-feedback">
+            <div *ngIf="email.errors.required">Email is required</div>
+            <div *ngIf="email.errors.email">Email must be a valid email address</div>
+        </div>
+        </div>
+      </div>
+      <br />
+      <div class="row ">
+        <div class="col ">
+          <input
+            type="password"
+            name="password"
+            ngModel
+
+            #password="ngModel"
+            class="form-control co"
+            id="inputPassword4"
+            placeholder="Password"
+            [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+          />
+          <div *ngIf="f.submitted && password.errors" class="invalid-feedback">
+            <div *ngIf="password.errors?.required">Password is required</div>
+           <div *ngIf="password.errors?.pattern">minimam one capital one saall letter and one special characters must</div>
+            <div *ngIf="password.errors?.minlength">Password must be at least 8 characters</div>
+        </div></div>
+
+      </div>
+      <br>
+      <div class="row ">
+        <div class="col ">
+          <input
+            type="password"
+            name="confirmpassword"
+            class="form-control co"
+            ngModel
+
+            #confirmpassword="ngModel"
+            class="form-control co"
+            id="inputconfirmPassword4"
+            placeholder="confirm Password"
+            [ngClass]="{ 'is-invalid': f.submitted && confirmpassword.invalid }" required password
+          />
+          <div *ngIf="f.submitted && confirmpassword.errors" class="invalid-feedback">
+            <div *ngIf="confirmpassword.errors?.required">confirm Password is required</div>
+            <div *ngIf="confirmpassword.errors.confirmedValidator">Password and Confirm Password must be match.</div>
+        </div>
+        <div class="text-danger" *ngIf="confirmpassword.value!=password.value">confirm Password not match with a password</div>
+      </div>
+      <br>
+      <br>
+
+      <div class="text-center">
+        <button class="btn btn-primary me-1">Register</button>
+        <button class="btn btn-secondary" type="reset">Cancel</button>
+    </div></div>
+  </form>
+
+
+  </div>
+</div>
+</div>

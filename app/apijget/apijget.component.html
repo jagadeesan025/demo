@@ -1,0 +1,78 @@
+<!--
+
+  <table> <th>country</th>
+    <th>post code</th>
+    <th>country abbreviation</th>
+    <th>places
+    </th>
+<tr>
+    <td> {{country}}</td>
+
+
+
+    <td>{{places}}</td>
+    <td>{{abreviation}}</td>
+    <tr *ngFor="let x of list">
+      <td></td>
+<th>{{x.placename}}</th>
+    </tr>
+    <html>
+
+    <head>
+      <title>Error: 404 Not Found</title>
+      <style type="text/css">
+        html {
+          background-color: #eee;
+          font-family: sans;
+        }
+
+        body {
+          background-color: #fff;
+          border: 1px solid #ddd;
+          padding: 15px;
+          margin: 15px;
+        }
+
+        pre {
+          background-color: #eee;
+          border: 1px solid #ddd;
+
+
+
+          padding: 5px;
+        }
+      </style>
+    </head>
+
+    <body>
+      <h1>Error: 404 Not Found</h1>
+      <p>Sorry, the requested URL <td>&#039;http://api.zippopotam.us/us/33170/&#039;</td>
+        caused an error:</p>
+      <pre>Not found: &#039;/us/33170/&#039;</pre>
+    </body>
+
+    </html>
+
+     -->
+     <br>
+     <button style="background-color: rgb(68, 249, 255) ; text-align: right; float: right; " routerLink="/apiget">Add new member</button>
+
+     <br><br>
+      <table >
+       <tr style="background-color: aquamarine;">
+
+           <th> categoryId</th>
+         <th> category</th>
+         <th>description</th>
+         <th>deletedOn</th>
+         <th>removedRemarks</th>
+        <th>createdBy</th>
+       </tr>
+        <tr *ngFor="let x  of list" >
+         <td>{{x.categoryId}}</td>
+         <td>{{x. category}}</td>
+        <td>{{x.description}}</td>
+        <td>{{x.deletedOn}</td>
+        <td>{{x.createdBy}}</td></tr>
+      </table>
+
