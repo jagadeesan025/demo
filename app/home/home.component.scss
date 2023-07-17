@@ -1,121 +1,20 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+p{
+  color: rgba(215, 34, 34, 0.575);
+  font-size: 22px;
+  border-color: rgb(101, 55, 201);
+  border: 30px;}
+h1{
+  color: rgb(0, 0, 10);
+  font-size: 30px;
 }
-
-body {
-  font-family: "Helvetica Neue",sans-serif;
-  font-weight: lighter;
+table,tr,td{
+  border: 8px solid rgb(20, 14, 5);
+  box-shadow: 5px solid rgb(103, 252, 255);
 }
-
-header {
-  width: 100%;
-  height: 100px;
-  background-color: aqua;
-  background-size: cover;
+table{
+  font-size: 10px solid rgb(89, 6, 89);
 }
-
-.content {
-  width: 94%;
-  margin: 4em auto;
-  font-size: 20px;
-  line-height: 30px;
-  text-align: justify;
+table, td
+{
+  width: 70%;
 }
-
-.logo {
-  line-height: 60px;
-  position: fixed;
-  float: left;
-  margin: 16px 46px;
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 2px;
-}
-
-nav {
-  position: fixed;
-  width: 100%;
-  line-height: 60px;
-}
-
-nav ul {
-  line-height: 60px;
-  list-style: none;
-  overflow: hidden;
-
-  padding: 0;
-  text-align: right;
-  margin: 0;
-  padding-right: 40px;
-  transition: 1s;
-}
-
-nav.black ul {
-  background: #000;
-}
-
-nav ul li {
-  display: inline-block;
-  padding: 16px 40px;;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-size: 16px;
-}
-
-.menu-icon {
-  line-height: 60px;
-  width: 100%;
-  background: #000;
-  text-align: right;
-  box-sizing: border-box;
-  padding: 15px 24px;
-  cursor: pointer;
-  color: rgb(0, 0, 0);
-  display: none;
-}
-
-.e
-{color: #000;}
-
-@media(max-width: 300px) {
-
-  .logo {
-
-        top: 0;
-        margin-top: 16px;
-  }
-
-  nav ul {
-        max-height: 0px;
-        background: #000;
-  }
-
-  nav.black ul {
-        background: #000;
-  }
-
-  .showing {
-        max-height: 34em;
-  }
-
-  nav ul li {
-        box-sizing: border-box;
-        width: 100%;
-        padding: 24px;
-        text-align: center;
-  }
-  menu {
-    display: block;
-    width: 60px;
-    background-color: #dddddd;
-  }
-
-}
-
-
